@@ -1,6 +1,7 @@
 package com.earth2me.essentials.protect;
 
 import net.ess3.api.IEssentials;
+
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
@@ -13,6 +14,7 @@ import org.bukkit.event.block.*;
 public class EssentialsProtectBlockListener implements Listener
 {
 	final private IProtect prot;
+	@SuppressWarnings("unused")
 	final private IEssentials ess;
 
 	public EssentialsProtectBlockListener(final IProtect parent)
