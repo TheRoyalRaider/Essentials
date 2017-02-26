@@ -2,7 +2,6 @@ package com.earth2me.essentials.chat;
 
 import static com.earth2me.essentials.I18n.tl;
 import com.earth2me.essentials.User;
-import static com.earth2me.essentials.chat.EssentialsChatPlayer.logger;
 import net.ess3.api.IEssentials;
 import java.util.HashSet;
 import java.util.Iterator;

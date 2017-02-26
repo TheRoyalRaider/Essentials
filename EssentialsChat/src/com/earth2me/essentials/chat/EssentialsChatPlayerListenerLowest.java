@@ -2,9 +2,12 @@ package com.earth2me.essentials.chat;
 
 import com.earth2me.essentials.User;
 import com.earth2me.essentials.utils.FormatUtil;
+
 import net.ess3.api.IEssentials;
+
 import java.util.Locale;
 import java.util.Map;
+
 import org.bukkit.Server;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -21,6 +24,7 @@ public class EssentialsChatPlayerListenerLowest extends EssentialsChatPlayer
 		super(server, ess, chatStorage);
 	}
 
+	@SuppressWarnings("deprecation")
 	@EventHandler(priority = EventPriority.LOWEST)
 	@Override
 	public void onPlayerChat(final AsyncPlayerChatEvent event)
