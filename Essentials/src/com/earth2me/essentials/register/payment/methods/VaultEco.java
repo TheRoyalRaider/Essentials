@@ -1,8 +1,10 @@
 package com.earth2me.essentials.register.payment.methods;
 
 import com.earth2me.essentials.register.payment.Method;
+
 import net.milkbowl.vault.Vault;
 import net.milkbowl.vault.economy.Economy;
+
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.RegisteredServiceProvider;
 
@@ -76,12 +78,14 @@ public class VaultEco implements Method
 		return this.economy.getBanks().contains(bank);
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public boolean hasAccount(String name)
 	{
 		return this.economy.hasAccount(name);
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public boolean hasBankAccount(String bank, String name)
 	{
@@ -89,12 +93,14 @@ public class VaultEco implements Method
 			   || this.economy.isBankMember(bank, name).transactionSuccess();
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public boolean createAccount(String name)
 	{
 		return this.economy.createBank(name, "").transactionSuccess();
 	}
 
+	@SuppressWarnings("deprecation")
 	public boolean createAccount(String name, double balance)
 	{
 		if (!this.economy.createBank(name, "").transactionSuccess())
@@ -167,12 +173,14 @@ public class VaultEco implements Method
 			this.economy = economy;
 		}
 
+		@SuppressWarnings("deprecation")
 		@Override
 		public double balance()
 		{
 			return this.economy.getBalance(this.name);
 		}
 
+		@SuppressWarnings("deprecation")
 		@Override
 		public boolean set(double amount)
 		{
@@ -187,12 +195,14 @@ public class VaultEco implements Method
 			return this.economy.depositPlayer(this.name, amount).transactionSuccess();
 		}
 
+		@SuppressWarnings("deprecation")
 		@Override
 		public boolean add(double amount)
 		{
 			return this.economy.depositPlayer(this.name, amount).transactionSuccess();
 		}
 
+		@SuppressWarnings("deprecation")
 		@Override
 		public boolean subtract(double amount)
 		{

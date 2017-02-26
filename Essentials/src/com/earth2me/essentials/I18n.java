@@ -12,7 +12,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.regex.Pattern;
 import net.ess3.api.IEssentials;
-import org.bukkit.Bukkit;
 
 
 public class I18n implements net.ess3.api.II18n

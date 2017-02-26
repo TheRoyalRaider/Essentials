@@ -6,7 +6,6 @@ import com.earth2me.essentials.User;
 import org.bukkit.Location;
 import org.bukkit.Server;
 import org.bukkit.World;
-import org.bukkit.entity.Player;
 
 
 public class Commandnear extends EssentialsCommand

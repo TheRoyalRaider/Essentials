@@ -2,6 +2,7 @@ package com.earth2me.essentials;
 
 import static com.earth2me.essentials.I18n.tl;
 import static com.earth2me.essentials.I18n.capitalCase;
+
 import com.earth2me.essentials.Trade.OverflowType;
 import com.earth2me.essentials.commands.NoChargeException;
 import com.earth2me.essentials.craftbukkit.InventoryWorkaround;
@@ -10,10 +11,13 @@ import com.earth2me.essentials.textreader.KeywordReplacer;
 import com.earth2me.essentials.textreader.SimpleTextInput;
 import com.earth2me.essentials.utils.DateUtil;
 import com.earth2me.essentials.utils.NumberUtil;
+
 import java.math.BigDecimal;
 import java.util.*;
 import java.util.logging.Level;
+
 import net.ess3.api.IEssentials;
+
 import org.bukkit.Material;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.inventory.ItemStack;
@@ -180,6 +184,7 @@ public class Kit
 		}
 	}
 
+	@SuppressWarnings("rawtypes")
 	public List<String> getItems(final User user) throws Exception
 	{
 		if (kit == null)

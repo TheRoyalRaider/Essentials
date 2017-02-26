@@ -1,14 +1,19 @@
 package com.earth2me.essentials.signs;
 
 import com.earth2me.essentials.*;
+
 import static com.earth2me.essentials.I18n.tl;
+
 import com.earth2me.essentials.Trade.OverflowType;
 import com.earth2me.essentials.Trade.TradeType;
 import com.earth2me.essentials.utils.NumberUtil;
+
 import java.math.BigDecimal;
 import java.util.Map;
+
 import net.ess3.api.IEssentials;
 import net.ess3.api.MaxMoneyException;
+
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 
@@ -92,6 +97,7 @@ public class SignTrade extends EssentialsSign
 		return true;
 	}
 
+	@SuppressWarnings("deprecation")
 	private Trade rechargeSign(final ISign sign, final IEssentials ess, final User player) throws SignException, ChargeException
 	{
 		final Trade trade = getTrade(sign, 2, AmountType.COST, false, ess);

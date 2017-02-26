@@ -13,6 +13,7 @@ public enum Signs
 	INFO(new SignInfo()),
 	KIT(new SignKit()),
 	MAIL(new SignMail()),
+	@SuppressWarnings("deprecation")
 	PROTECTION(new SignProtection()),
 	REPAIR(new SignRepair()),
 	SELL(new SignSell()),

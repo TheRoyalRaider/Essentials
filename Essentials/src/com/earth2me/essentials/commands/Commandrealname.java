@@ -6,7 +6,6 @@ import com.earth2me.essentials.User;
 import com.earth2me.essentials.utils.FormatUtil;
 import java.util.Locale;
 import org.bukkit.Server;
-import org.bukkit.entity.Player;
 
 
 public class Commandrealname extends EssentialsCommand

@@ -1,7 +1,9 @@
 package com.earth2me.essentials;
 
 import static com.earth2me.essentials.I18n.tl;
+
 import com.google.common.io.Files;
+
 import java.io.*;
 import java.math.BigDecimal;
 import java.math.MathContext;
@@ -19,7 +21,9 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import net.ess3.api.InvalidWorldException;
+
 import org.bukkit.*;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.configuration.ConfigurationSection;
@@ -529,11 +533,13 @@ public class EssentialsConf extends YamlConfiguration
 		set(path, map);
 	}
 
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public void setProperty(String path, List object)
 	{
 		set(path, new ArrayList(object));
 	}
 
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public void setProperty(String path, Map object)
 	{
 		set(path, new LinkedHashMap(object));

@@ -1,6 +1,7 @@
 package com.earth2me.essentials.commands;
 
 
+@SuppressWarnings("serial")
 public class NotEnoughArgumentsException extends Exception
 {
 	public NotEnoughArgumentsException()

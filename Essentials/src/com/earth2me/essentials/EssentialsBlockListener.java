@@ -1,8 +1,11 @@
 package com.earth2me.essentials;
 
 import com.earth2me.essentials.utils.LocationUtil;
+
 import java.util.Locale;
+
 import net.ess3.api.IEssentials;
+
 import org.bukkit.GameMode;
 import org.bukkit.Material;
 import org.bukkit.block.BlockState;
@@ -24,6 +27,7 @@ public class EssentialsBlockListener implements Listener
 		this.ess = ess;
 	}
 
+	@SuppressWarnings("deprecation")
 	@EventHandler(priority = EventPriority.LOW, ignoreCancelled = true)
 	public void onBlockPlace(final BlockPlaceEvent event)
 	{

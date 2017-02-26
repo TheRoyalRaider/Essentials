@@ -3,11 +3,15 @@ package com.earth2me.essentials.metrics;
 import com.earth2me.essentials.metrics.Metrics.Graph;
 import com.earth2me.essentials.metrics.Metrics.Plotter;
 import com.earth2me.essentials.register.payment.Method;
+import com.earth2me.essentials.register.payment.Methods;
 import com.earth2me.essentials.register.payment.methods.VaultEco;
 import com.earth2me.essentials.signs.EssentialsSign;
+
 import java.util.Locale;
 import java.util.logging.Level;
+
 import net.ess3.api.IEssentials;
+
 import org.bukkit.configuration.ConfigurationSection;
 
 
@@ -172,7 +176,8 @@ public class MetricsStarter implements Runnable
 			}
 
 			final Graph depGraph = metrics.createGraph("Dependencies");
-			final Method method = ess.getPaymentMethod().getMethod();
+			ess.getPaymentMethod();
+			final Method method = Methods.getMethod();
 			if (method != null)
 			{
 				String version;

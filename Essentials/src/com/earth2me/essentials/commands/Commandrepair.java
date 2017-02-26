@@ -1,12 +1,17 @@
 package com.earth2me.essentials.commands;
 
 import com.earth2me.essentials.*;
+
 import static com.earth2me.essentials.I18n.tl;
+
 import com.earth2me.essentials.utils.StringUtil;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+
 import net.ess3.api.IUser;
+
 import org.bukkit.Material;
 import org.bukkit.Server;
 import org.bukkit.inventory.ItemStack;
@@ -39,6 +44,7 @@ public class Commandrepair extends EssentialsCommand
 		}
 	}
 
+	@SuppressWarnings("deprecation")
 	public void repairHand(User user) throws Exception
 	{
 		final ItemStack item = user.getBase().getItemInHand();
@@ -87,6 +93,7 @@ public class Commandrepair extends EssentialsCommand
 		}
 	}
 
+	@SuppressWarnings("deprecation")
 	private void repairItem(final ItemStack item) throws Exception
 	{
 		final Material material = Material.getMaterial(item.getTypeId());
@@ -103,6 +110,7 @@ public class Commandrepair extends EssentialsCommand
 		item.setDurability((short)0);
 	}
 
+	@SuppressWarnings("deprecation")
 	private void repairItems(final ItemStack[] items, final IUser user, final List<String> repaired)
 	{
 		for (ItemStack item : items)

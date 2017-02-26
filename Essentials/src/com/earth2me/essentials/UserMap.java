@@ -4,8 +4,6 @@ import com.earth2me.essentials.utils.StringUtil;
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
-import com.google.common.cache.RemovalCause;
-import com.google.common.cache.RemovalNotification;
 import com.google.common.util.concurrent.UncheckedExecutionException;
 import java.io.File;
 import java.util.ArrayList;
@@ -15,7 +13,6 @@ import java.util.Set;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentSkipListMap;
 import java.util.concurrent.ConcurrentSkipListSet;
-import java.util.concurrent.ExecutionException;
 import net.ess3.api.IEssentials;
 import org.bukkit.entity.Player;
 

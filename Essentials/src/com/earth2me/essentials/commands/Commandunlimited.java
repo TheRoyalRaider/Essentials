@@ -1,9 +1,12 @@
 package com.earth2me.essentials.commands;
 
 import static com.earth2me.essentials.I18n.tl;
+
 import com.earth2me.essentials.User;
+
 import java.util.List;
 import java.util.Locale;
+
 import org.bukkit.Material;
 import org.bukkit.Server;
 import org.bukkit.inventory.ItemStack;
@@ -56,6 +59,7 @@ public class Commandunlimited extends EssentialsCommand
 		}
 	}
 
+	@SuppressWarnings("deprecation")
 	private String getList(final User target)
 	{
 		final StringBuilder output = new StringBuilder();
@@ -80,6 +84,7 @@ public class Commandunlimited extends EssentialsCommand
 		return output.toString();
 	}
 
+	@SuppressWarnings("deprecation")
 	private Boolean toggleUnlimited(final User user, final User target, final String item) throws Exception
 	{
 		final ItemStack stack = ess.getItemDb().get(item, 1);

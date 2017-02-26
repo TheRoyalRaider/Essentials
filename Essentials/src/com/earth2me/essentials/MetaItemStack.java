@@ -1,17 +1,22 @@
 package com.earth2me.essentials;
 
 import static com.earth2me.essentials.I18n.tl;
+
 import com.earth2me.essentials.textreader.BookInput;
 import com.earth2me.essentials.textreader.BookPager;
 import com.earth2me.essentials.textreader.IText;
 import com.earth2me.essentials.utils.FormatUtil;
 import com.earth2me.essentials.utils.NumberUtil;
+
 import java.util.*;
 import java.util.regex.Pattern;
 
 import com.google.common.base.Joiner;
+
 import java.util.logging.Level;
+
 import net.ess3.api.IEssentials;
+
 import org.bukkit.Color;
 import org.bukkit.DyeColor;
 import org.bukkit.FireworkEffect;
@@ -97,6 +102,7 @@ public class MetaItemStack
 		completePotion = true;
 	}
 
+	@SuppressWarnings("deprecation")
 	public boolean canSpawn(final IEssentials ess)
 	{
 		try
@@ -126,6 +132,7 @@ public class MetaItemStack
 		}
 	}
 
+	@SuppressWarnings("deprecation")
 	public void parseStringMeta(final CommandSource sender, final boolean allowUnsafe, String[] string, int fromArg, final IEssentials ess) throws Exception
 	{
 		if (string[fromArg].startsWith("{") && hasMetaPermission(sender, "vanilla", false, true, ess))

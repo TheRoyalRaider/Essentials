@@ -5,7 +5,6 @@ import com.earth2me.essentials.Console;
 import static com.earth2me.essentials.I18n.tl;
 import com.earth2me.essentials.IReplyTo;
 import com.earth2me.essentials.User;
-import static com.earth2me.essentials.commands.EssentialsCommand.getFinalArg;
 import com.earth2me.essentials.utils.FormatUtil;
 import org.bukkit.Server;
 import org.bukkit.command.CommandSender;

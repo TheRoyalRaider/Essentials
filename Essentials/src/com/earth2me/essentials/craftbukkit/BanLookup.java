@@ -1,7 +1,6 @@
 package com.earth2me.essentials.craftbukkit;
 
 import com.earth2me.essentials.User;
-import java.util.Iterator;
 import java.util.Set;
 import net.ess3.api.IEssentials;
 import org.bukkit.BanEntry;

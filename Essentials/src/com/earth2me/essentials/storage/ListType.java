@@ -10,5 +10,6 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface ListType
 {
+	@SuppressWarnings("rawtypes")
 	Class value() default String.class;
 }

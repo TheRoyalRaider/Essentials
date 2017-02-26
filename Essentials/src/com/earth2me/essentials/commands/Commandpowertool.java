@@ -1,12 +1,16 @@
 package com.earth2me.essentials.commands;
 
 import com.earth2me.essentials.CommandSource;
+
 import static com.earth2me.essentials.I18n.tl;
+
 import com.earth2me.essentials.User;
 import com.earth2me.essentials.utils.StringUtil;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+
 import org.bukkit.Material;
 import org.bukkit.Server;
 import org.bukkit.inventory.ItemStack;
@@ -19,6 +23,7 @@ public class Commandpowertool extends EssentialsCommand
 		super("powertool");
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	protected void run(final Server server, final User user, final String commandLabel, final String[] args) throws Exception
 	{

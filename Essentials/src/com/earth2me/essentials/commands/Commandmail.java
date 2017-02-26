@@ -5,7 +5,6 @@ import static com.earth2me.essentials.I18n.tl;
 import com.earth2me.essentials.User;
 import com.earth2me.essentials.textreader.IText;
 import com.earth2me.essentials.textreader.SimpleTextInput;
-import com.earth2me.essentials.textreader.SimpleTextPager;
 import com.earth2me.essentials.textreader.TextPager;
 import com.earth2me.essentials.utils.FormatUtil;
 import com.earth2me.essentials.utils.StringUtil;

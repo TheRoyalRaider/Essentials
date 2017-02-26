@@ -45,7 +45,7 @@ public class StringUtil
 
 			if (each instanceof Collection)
 			{
-				buf.append(joinList(seperator, ((Collection)each).toArray()));
+				buf.append(joinList(seperator, ((Collection<?>)each).toArray()));
 			}
 			else
 			{
@@ -78,7 +78,7 @@ public class StringUtil
 
 			if (each instanceof Collection)
 			{
-				buf.append(joinListSkip(seperator, skip, ((Collection)each).toArray()));
+				buf.append(joinListSkip(seperator, skip, ((Collection<?>)each).toArray()));
 			}
 			else
 			{

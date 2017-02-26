@@ -1,15 +1,19 @@
 package com.earth2me.essentials;
 
 import static com.earth2me.essentials.I18n.tl;
+
 import com.earth2me.essentials.Mob.MobException;
 import com.earth2me.essentials.utils.LocationUtil;
 import com.earth2me.essentials.utils.StringUtil;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
 import java.util.Set;
+
 import net.ess3.api.IEssentials;
+
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.Server;
@@ -151,6 +155,7 @@ public class SpawnMob
 		}
 	}
 
+	@SuppressWarnings("deprecation")
 	private static void spawnMob(final IEssentials ess, final Server server, final CommandSource sender, final User target, final Location sloc, List<String> parts, List<String> data) throws Exception
 	{
 		Mob mob;
@@ -280,6 +285,7 @@ public class SpawnMob
 		}
 	}
 
+	@SuppressWarnings("deprecation")
 	private static void defaultMobData(final EntityType type, final Entity spawned)
 	{
 		if (type == EntityType.SKELETON)

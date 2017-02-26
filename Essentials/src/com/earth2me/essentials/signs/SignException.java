@@ -1,6 +1,7 @@
 package com.earth2me.essentials.signs;
 
 
+@SuppressWarnings("serial")
 public class SignException extends Exception
 {
 	public SignException(final String message)

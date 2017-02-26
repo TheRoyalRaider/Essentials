@@ -1,14 +1,17 @@
 package com.earth2me.essentials.commands;
 
 import static com.earth2me.essentials.I18n.tl;
+
 import com.earth2me.essentials.MetaItemStack;
 import com.earth2me.essentials.Potions;
 import com.earth2me.essentials.User;
 import com.earth2me.essentials.utils.StringUtil;
+
 import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
+
 import org.bukkit.Material;
 import org.bukkit.Server;
 import org.bukkit.inventory.ItemStack;
@@ -24,6 +27,7 @@ public class Commandpotion extends EssentialsCommand
 		super("potion");
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	protected void run(final Server server, final User user, final String commandLabel, final String[] args) throws Exception
 	{

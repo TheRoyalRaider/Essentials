@@ -3,6 +3,7 @@ package com.earth2me.essentials.perm;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
+
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -50,6 +51,7 @@ public class ZPermissionsHandler extends SuperpermsHandler implements Listener
 		}
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public List<String> getGroups(Player base)
 	{
@@ -63,6 +65,7 @@ public class ZPermissionsHandler extends SuperpermsHandler implements Listener
 		}
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public boolean inGroup(Player base, String group)
 	{
@@ -110,6 +113,7 @@ public class ZPermissionsHandler extends SuperpermsHandler implements Listener
 		}
 	}
 
+	@SuppressWarnings("deprecation")
 	private String getPrefixSuffix(Player base, String metadataName)
 	{
 		String playerPrefixSuffix;
@@ -169,6 +173,7 @@ public class ZPermissionsHandler extends SuperpermsHandler implements Listener
 		return service != null;
 	}
 
+	@SuppressWarnings("deprecation")
 	private String getPrimaryGroup(String playerName)
 	{
 		if (hasGetPlayerPrimaryGroup)

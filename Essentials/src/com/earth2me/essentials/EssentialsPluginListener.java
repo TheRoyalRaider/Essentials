@@ -2,8 +2,11 @@ package com.earth2me.essentials;
 
 import com.earth2me.essentials.perm.PermissionsHandler;
 import com.earth2me.essentials.register.payment.Methods;
+
 import java.util.logging.Level;
+
 import net.ess3.api.IEssentials;
+
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
@@ -20,6 +23,7 @@ public class EssentialsPluginListener implements Listener, IConf
 		this.ess = ess;
 	}
 
+	@SuppressWarnings("static-access")
 	@EventHandler(priority = EventPriority.MONITOR)
 	public void onPluginEnable(final PluginEnableEvent event)
 	{
@@ -51,7 +55,8 @@ public class EssentialsPluginListener implements Listener, IConf
 		// Check to see if the plugin thats being disabled is the one we are using
 		if (ess.getPaymentMethod() != null && Methods.hasMethod() && Methods.checkDisabled(event.getPlugin()))
 		{
-			ess.getPaymentMethod().reset();
+			ess.getPaymentMethod();
+			Methods.reset();
 			ess.getLogger().log(Level.INFO, "Payment method was disabled. No longer accepting payments.");
 		}
 	}

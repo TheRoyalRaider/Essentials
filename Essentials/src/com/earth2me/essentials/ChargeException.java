@@ -1,6 +1,7 @@
 package com.earth2me.essentials;
 
 
+@SuppressWarnings("serial")
 public class ChargeException extends Exception
 {
 	public ChargeException(final String message)

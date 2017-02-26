@@ -10,5 +10,6 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface MapKeyType
 {
+	@SuppressWarnings("rawtypes")
 	Class value() default String.class;
 }

@@ -2,10 +2,13 @@ package com.earth2me.essentials.signs;
 
 import com.earth2me.essentials.User;
 import com.earth2me.essentials.utils.FormatUtil;
+
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import net.ess3.api.IEssentials;
 import net.ess3.api.MaxMoneyException;
+
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.block.Sign;
@@ -260,6 +263,7 @@ public class SignBlockListener implements Listener
 		}
 	}
 
+	@SuppressWarnings("deprecation")
 	@EventHandler(priority = EventPriority.LOW)
 	public void onSignBlockPistonRetract(final BlockPistonRetractEvent event)
 	{

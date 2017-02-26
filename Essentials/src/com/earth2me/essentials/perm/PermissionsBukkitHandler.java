@@ -3,9 +3,11 @@ package com.earth2me.essentials.perm;
 import com.platymuus.bukkit.permissions.Group;
 import com.platymuus.bukkit.permissions.PermissionInfo;
 import com.platymuus.bukkit.permissions.PermissionsPlugin;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 
@@ -46,6 +48,7 @@ public class PermissionsBukkitHandler extends SuperpermsHandler
 		return groupNames;
 	}
 
+	@SuppressWarnings("deprecation")
 	private List<Group> getPBGroups(final Player base)
 	{
 		final PermissionInfo info = plugin.getPlayerInfo(base.getName());

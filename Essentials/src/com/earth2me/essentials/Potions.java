@@ -1,11 +1,13 @@
 package com.earth2me.essentials;
 
 import com.earth2me.essentials.utils.NumberUtil;
+
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
+
 import org.bukkit.potion.PotionEffectType;
 
 
@@ -116,6 +118,7 @@ public class Potions
 		ALIASPOTIONS.put("air", PotionEffectType.WATER_BREATHING);
 	}
 
+	@SuppressWarnings("deprecation")
 	public static PotionEffectType getByName(String name)
 	{
 		PotionEffectType peffect;

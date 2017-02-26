@@ -2,11 +2,14 @@ package com.earth2me.essentials.perm;
 
 import de.bananaco.bpermissions.api.ApiLayer;
 import de.bananaco.bpermissions.api.util.CalculableType;
+
 import java.util.Arrays;
 import java.util.List;
+
 import org.bukkit.entity.Player;
 
 
+@SuppressWarnings("deprecation")
 public class BPermissions2Handler extends SuperpermsHandler
 {
 	public BPermissions2Handler()

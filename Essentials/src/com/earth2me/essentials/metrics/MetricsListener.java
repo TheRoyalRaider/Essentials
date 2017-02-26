@@ -1,8 +1,11 @@
 package com.earth2me.essentials.metrics;
 
 import com.earth2me.essentials.User;
+
 import java.util.logging.Level;
+
 import net.ess3.api.IEssentials;
+
 import org.bukkit.Server;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -12,6 +15,7 @@ import org.bukkit.event.player.PlayerJoinEvent;
 
 public class MetricsListener implements Listener
 {
+	@SuppressWarnings("unused")
 	private final transient Server server;
 	private final transient IEssentials ess;
 	private final transient MetricsStarter starter;

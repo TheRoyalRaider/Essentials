@@ -1,12 +1,16 @@
 package com.earth2me.essentials;
 
 import static com.earth2me.essentials.I18n.tl;
+
 import com.earth2me.essentials.utils.NumberUtil;
 import com.earth2me.essentials.utils.StringUtil;
+
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 import net.ess3.api.IEssentials;
+
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
@@ -14,6 +18,7 @@ import org.bukkit.inventory.ItemStack;
 
 public class ItemDb implements IConf, net.ess3.api.IItemDb
 {
+	@SuppressWarnings("unused")
 	private final transient IEssentials ess;
 	private final transient Map<String, Integer> items = new HashMap<String, Integer>();
 	private final transient Map<ItemData, List<String>> names = new HashMap<ItemData, List<String>>();
@@ -89,6 +94,7 @@ public class ItemDb implements IConf, net.ess3.api.IItemDb
 		return retval;
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public ItemStack get(final String id) throws Exception
 	{
@@ -164,6 +170,7 @@ public class ItemDb implements IConf, net.ess3.api.IItemDb
 		return retval;
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public List<ItemStack> getMatching(User user, String[] args) throws Exception
 	{
@@ -212,6 +219,7 @@ public class ItemDb implements IConf, net.ess3.api.IItemDb
 		return is;
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public String names(ItemStack item)
 	{
@@ -234,6 +242,7 @@ public class ItemDb implements IConf, net.ess3.api.IItemDb
 		return StringUtil.joinList(", ", nameList);
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public String name(ItemStack item)
 	{

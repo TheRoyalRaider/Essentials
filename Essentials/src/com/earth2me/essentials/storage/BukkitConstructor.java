@@ -1,10 +1,12 @@
 package com.earth2me.essentials.storage;
 
 import com.earth2me.essentials.utils.NumberUtil;
+
 import java.lang.reflect.Field;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -23,12 +25,10 @@ import org.yaml.snakeyaml.nodes.*;
 
 public class BukkitConstructor extends CustomClassLoaderConstructor
 {
-	private final transient Plugin plugin;
-
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public BukkitConstructor(final Class clazz, final Plugin plugin)
 	{
 		super(clazz, plugin.getClass().getClassLoader());
-		this.plugin = plugin;
 		yamlClassConstructors.put(NodeId.scalar, new ConstructBukkitScalar());
 		yamlClassConstructors.put(NodeId.mapping, new ConstructBukkitMapping());
 	}
@@ -36,6 +36,7 @@ public class BukkitConstructor extends CustomClassLoaderConstructor
 
 	private class ConstructBukkitScalar extends ConstructScalar
 	{
+		@SuppressWarnings("deprecation")
 		@Override
 		public Object construct(final Node node)
 		{
@@ -275,6 +276,7 @@ public class BukkitConstructor extends CustomClassLoaderConstructor
 			return super.construct(node);
 		}
 
+		@SuppressWarnings({ "unchecked", "incomplete-switch" })
 		@Override
 		protected Object constructJavaBean2ndStep(final MappingNode node, final Object object)
 		{

@@ -1,11 +1,14 @@
 package com.earth2me.essentials;
 
 import static com.earth2me.essentials.I18n.tl;
+
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.regex.Pattern;
+
 import net.ess3.api.IEssentials;
+
 import org.bukkit.Material;
 import org.bukkit.entity.*;
 import org.bukkit.event.EventHandler;
@@ -28,6 +31,7 @@ public class EssentialsEntityListener implements Listener
 	}
 
 	// This method does something undocumented reguarding certain bucket types #EasterEgg
+	@SuppressWarnings("deprecation")
 	@EventHandler(priority = EventPriority.LOW)
 	public void onEntityDamage(final EntityDamageByEntityEvent event)
 	{
@@ -95,6 +99,7 @@ public class EssentialsEntityListener implements Listener
 		onPlayerVsPlayerPowertool(event, defender, attacker);
 	}
 
+	@SuppressWarnings("deprecation")
 	private void onPlayerVsPlayerPowertool(final EntityDamageByEntityEvent event, final Player defender, final User attacker)
 	{
 		final List<String> commandList = attacker.getPowertool(attacker.getBase().getItemInHand());

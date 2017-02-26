@@ -1,14 +1,18 @@
 package com.earth2me.essentials;
 
 import static com.earth2me.essentials.I18n.tl;
+
 import com.earth2me.essentials.utils.NumberUtil;
 import com.earth2me.essentials.utils.StringUtil;
+
 import java.io.File;
 import java.math.BigDecimal;
 import java.util.*;
+
 import net.ess3.api.IEssentials;
 import net.ess3.api.InvalidWorldException;
 import net.ess3.api.MaxMoneyException;
+
 import org.bukkit.Location;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Player;
@@ -278,11 +282,13 @@ public abstract class UserData extends PlayerExtension implements IConf
 		return unlimited;
 	}
 
+	@SuppressWarnings("deprecation")
 	public boolean hasUnlimited(ItemStack stack)
 	{
 		return unlimited.contains(stack.getTypeId());
 	}
 
+	@SuppressWarnings("deprecation")
 	public void setUnlimited(ItemStack stack, boolean state)
 	{
 		if (unlimited.contains(stack.getTypeId()))
@@ -314,7 +320,7 @@ public abstract class UserData extends PlayerExtension implements IConf
 		config.save();
 	}
 
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings({ "unchecked", "deprecation" })
 	public List<String> getPowertool(ItemStack stack)
 	{
 		return (List<String>)powertools.get("" + stack.getTypeId());
@@ -326,6 +332,7 @@ public abstract class UserData extends PlayerExtension implements IConf
 		return (List<String>)powertools.get("" + id);
 	}
 
+	@SuppressWarnings("deprecation")
 	public void setPowertool(ItemStack stack, List<String> commandList)
 	{
 		if (commandList == null || commandList.isEmpty())
@@ -747,7 +754,6 @@ public abstract class UserData extends PlayerExtension implements IConf
 		config.setProperty("afk", set);
 		config.save();
 	}
-	private boolean newplayer;
 	private String geolocation;
 
 	private String _getGeoLocation()
@@ -896,6 +902,7 @@ public abstract class UserData extends PlayerExtension implements IConf
 		config.save();
 	}
 
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public void setConfigProperty(String node, Object object)
 	{
 		final String prefix = "info.";

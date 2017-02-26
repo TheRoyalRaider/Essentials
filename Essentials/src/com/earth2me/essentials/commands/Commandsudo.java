@@ -1,10 +1,14 @@
 package com.earth2me.essentials.commands;
 
 import com.earth2me.essentials.CommandSource;
+
 import static com.earth2me.essentials.I18n.tl;
+
 import com.earth2me.essentials.User;
+
 import java.util.Locale;
 import java.util.logging.Logger;
+
 import org.bukkit.Server;
 
 
@@ -14,6 +18,7 @@ public class Commandsudo extends EssentialsCommand
 	{
 		super("sudo");
 	}
+	@SuppressWarnings("unused")
 	private static final Logger LOGGER = Logger.getLogger("Essentials");
 
 	@Override

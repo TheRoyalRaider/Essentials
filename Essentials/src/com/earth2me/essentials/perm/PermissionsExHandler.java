@@ -2,7 +2,9 @@ package com.earth2me.essentials.perm;
 
 import java.util.Arrays;
 import java.util.List;
+
 import org.bukkit.entity.Player;
+
 import ru.tehkode.permissions.PermissionManager;
 import ru.tehkode.permissions.PermissionUser;
 import ru.tehkode.permissions.bukkit.PermissionsEx;
@@ -17,6 +19,7 @@ public class PermissionsExHandler extends SuperpermsHandler
 		manager = PermissionsEx.getPermissionManager();
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public String getGroup(final Player base)
 	{
@@ -35,6 +38,7 @@ public class PermissionsExHandler extends SuperpermsHandler
 		return groupsNames[0];
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public List<String> getGroups(final Player base)
 	{

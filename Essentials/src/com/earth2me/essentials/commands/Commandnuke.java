@@ -1,9 +1,12 @@
 package com.earth2me.essentials.commands;
 
 import com.earth2me.essentials.CommandSource;
+
 import static com.earth2me.essentials.I18n.tl;
+
 import java.util.ArrayList;
 import java.util.Collection;
+
 import org.bukkit.Location;
 import org.bukkit.Server;
 import org.bukkit.World;
@@ -18,6 +21,7 @@ public class Commandnuke extends EssentialsCommand
 		super("nuke");
 	}
 
+	@SuppressWarnings("unused")
 	@Override
 	protected void run(final Server server, final CommandSource sender, final String commandLabel, final String[] args) throws NoSuchFieldException, NotEnoughArgumentsException
 	{

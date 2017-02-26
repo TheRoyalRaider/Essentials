@@ -1,8 +1,11 @@
 package com.earth2me.essentials.commands;
 
 import com.earth2me.essentials.CommandSource;
+
 import static com.earth2me.essentials.I18n.tl;
+
 import com.earth2me.essentials.User;
+
 import org.bukkit.Server;
 import org.bukkit.inventory.ItemStack;
 
@@ -14,6 +17,7 @@ public class Commandsetworth extends EssentialsCommand
 		super("setworth");
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public void run(final Server server, final User user, final String commandLabel, final String[] args) throws Exception
 	{

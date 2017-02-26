@@ -1,11 +1,12 @@
 package com.earth2me.essentials;
 
 import static com.earth2me.essentials.I18n.tl;
+
 import com.earth2me.essentials.commands.NotEnoughArgumentsException;
+
 import java.io.File;
 import java.math.BigDecimal;
 import java.util.Locale;
-import java.util.logging.Logger;
 import org.bukkit.Material;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.inventory.ItemStack;
@@ -22,6 +23,7 @@ public class Worth implements IConf
 		config.load();
 	}
 
+	@SuppressWarnings("deprecation")
 	public BigDecimal getPrice(ItemStack itemStack)
 	{
 		String itemname = itemStack.getType().toString().toLowerCase(Locale.ENGLISH).replace("_", "");
@@ -80,6 +82,7 @@ public class Worth implements IConf
 		return result;
 	}
 
+	@SuppressWarnings("deprecation")
 	public int getAmount(IEssentials ess, User user, ItemStack is, String[] args, boolean isBulkSell) throws Exception
 	{
 		if (is == null || is.getType() == Material.AIR)
@@ -153,6 +156,7 @@ public class Worth implements IConf
 		return amount;
 	}
 
+	@SuppressWarnings("deprecation")
 	public void setPrice(ItemStack itemStack, double price)
 	{
 		if (itemStack.getType().getData() == null)

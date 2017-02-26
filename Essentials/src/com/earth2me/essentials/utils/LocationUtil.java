@@ -1,14 +1,16 @@
 package com.earth2me.essentials.utils;
 
-import com.earth2me.essentials.Essentials;
 import static com.earth2me.essentials.I18n.tl;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+
 import net.ess3.api.IUser;
+
 import org.bukkit.GameMode;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -18,6 +20,7 @@ import org.bukkit.entity.LivingEntity;
 import org.bukkit.inventory.ItemStack;
 
 
+@SuppressWarnings("deprecation")
 public class LocationUtil
 {
 	// The player can stand inside these materials
@@ -73,6 +76,7 @@ public class LocationUtil
 	public static final int RADIUS = 3;
 	public static final Vector3D[] VOLUME;
 
+	@SuppressWarnings("incomplete-switch")
 	public static ItemStack convertBlockToItem(final Block block)
 	{
 		final ItemStack is = new ItemStack(block.getType(), 1, (short)0, block.getData());

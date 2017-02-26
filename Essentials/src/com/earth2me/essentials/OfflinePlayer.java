@@ -46,6 +46,7 @@ public class OfflinePlayer implements Player
 		this.name = base.getName();
 	}
 
+	@SuppressWarnings("deprecation")
 	public OfflinePlayer(final String name, final Server server)
 	{
 		this.server = server;
@@ -1489,6 +1490,7 @@ public class OfflinePlayer implements Player
 		return base.isBanned();
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public void setBanned(boolean banned)
 	{

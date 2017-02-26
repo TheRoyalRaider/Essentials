@@ -2,11 +2,12 @@ package com.earth2me.essentials;
 
 import com.earth2me.essentials.api.NoLoanPermittedException;
 import com.earth2me.essentials.api.UserDoesNotExistException;
+
 import java.io.IOException;
+
 import junit.framework.TestCase;
-import static junit.framework.TestCase.assertFalse;
-import static junit.framework.TestCase.fail;
 import net.ess3.api.Economy;
+
 import org.bukkit.World.Environment;
 import org.bukkit.plugin.InvalidDescriptionException;
 import org.junit.Test;
@@ -40,6 +41,7 @@ public class EconomyTest extends TestCase
 	}
 
 	// only one big test, since we use static instances
+	@SuppressWarnings("deprecation")
 	@Test
 	public void testEconomy()
 	{

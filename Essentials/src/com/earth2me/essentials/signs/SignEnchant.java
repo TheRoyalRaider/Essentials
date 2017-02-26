@@ -1,9 +1,13 @@
 package com.earth2me.essentials.signs;
 
 import com.earth2me.essentials.*;
+
 import static com.earth2me.essentials.I18n.tl;
+
 import java.util.Locale;
+
 import net.ess3.api.IEssentials;
+
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemStack;
 
@@ -79,6 +83,7 @@ public class SignEnchant extends EssentialsSign
 		return true;
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	protected boolean onSignInteract(ISign sign, User player, String username, IEssentials ess) throws SignException, ChargeException
 	{

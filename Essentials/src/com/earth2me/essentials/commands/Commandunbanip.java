@@ -7,7 +7,6 @@ import com.earth2me.essentials.User;
 import com.earth2me.essentials.utils.FormatUtil;
 import java.util.logging.Level;
 import org.bukkit.BanList;
-import org.bukkit.Bukkit;
 import org.bukkit.Server;
 
 
