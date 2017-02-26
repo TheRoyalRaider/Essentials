@@ -2,10 +2,10 @@
 name: EssentialsSpawn
 main: com.earth2me.essentials.spawn.EssentialsSpawn
 # Note to developers: This next line cannot change, or the automatic versioning system will break.
-version: TeamCity
+version: 5.0.1
 website: http://tiny.cc/EssentialsCommands
 description: Provides spawn control commands, utilizing Essentials.
-authors: [Zenexer, ementalo, Aelux, Brettflan, KimKandor, snowleo, ceulemans, Xeology, KHobbits]
+authors: [MarioCMFlys, Zenexer, ementalo, Aelux, Brettflan, KimKandor, snowleo, ceulemans, Xeology, KHobbits]
 depend: [Essentials]
 commands:
   setspawn:

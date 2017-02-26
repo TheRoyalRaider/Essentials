@@ -22,4 +22,9 @@ public class Spawns implements StorageObject
 	public Map<String, Location> getSpawns() {
 		return spawns;
 	}
+
+	public void setSpawns(HashMap<String, Location> hashMap) {
+		this.spawns = hashMap;
+		
+	}
 }
