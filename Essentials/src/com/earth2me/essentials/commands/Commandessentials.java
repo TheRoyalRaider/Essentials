@@ -2,18 +2,22 @@ package com.earth2me.essentials.commands;
 
 import com.earth2me.essentials.CommandSource;
 import com.earth2me.essentials.EssentialsUpgrade;
+
 import static com.earth2me.essentials.I18n.tl;
+
 import com.earth2me.essentials.User;
 import com.earth2me.essentials.UserMap;
 import com.earth2me.essentials.metrics.Metrics;
 import com.earth2me.essentials.utils.DateUtil;
 import com.earth2me.essentials.utils.NumberUtil;
 import com.google.common.base.Charsets;
+
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 import java.util.UUID;
+
 import org.bukkit.Material;
 import org.bukkit.Server;
 import org.bukkit.Sound;
@@ -167,7 +171,7 @@ public class Commandessentials extends EssentialsCommand
 				}
 				for (Player onlinePlayer : ess.getOnlinePlayers())
 				{
-					onlinePlayer.playSound(onlinePlayer.getLocation(), Sound.NOTE_PIANO, 1, noteMap.get(note));
+					onlinePlayer.playSound(onlinePlayer.getLocation(), Sound.BLOCK_NOTE_BASS, 1, noteMap.get(note));
 				}
 			}
 		}, 20, 2);
@@ -217,7 +221,7 @@ public class Commandessentials extends EssentialsCommand
 			for (Player player : ess.getOnlinePlayers())
 			{
 				player.sendMessage(playerMoo);
-				player.playSound(player.getLocation(), Sound.COW_IDLE, 1, 1.0f);
+				player.playSound(player.getLocation(), Sound.ENTITY_COW_AMBIENT, 1, 1.0f);
 			}
 		}
 		else
@@ -226,7 +230,7 @@ public class Commandessentials extends EssentialsCommand
 			{
 				sender.getSender().sendMessage(playerMoo);
 				final Player player = sender.getPlayer();
-				player.playSound(player.getLocation(), Sound.COW_IDLE, 1, 1.0f);
+				player.playSound(player.getLocation(), Sound.ENTITY_COW_AMBIENT, 1, 1.0f);
 
 			}
 			else
@@ -359,6 +363,7 @@ public class Commandessentials extends EssentialsCommand
 
 		UUID essUUID = ess.getUserMap().getUser(name).getConfigUUID();
 
+		@SuppressWarnings("deprecation")
 		org.bukkit.OfflinePlayer player = ess.getServer().getOfflinePlayer(name);
 		UUID bukkituuid = player.getUniqueId();
 		sender.sendMessage("Bukkit Lookup: " + bukkituuid.toString());

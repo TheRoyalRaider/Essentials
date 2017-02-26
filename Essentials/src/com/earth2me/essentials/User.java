@@ -35,7 +35,7 @@ public class User extends UserData implements Comparable<User>, IReplyTo, net.es
 	private transient boolean vanished;
 	private transient final Teleport teleport;
 	private transient long teleportRequestTime;
-	private transient long lastOnlineActivity;
+	private transient long lastOnlineActivity = 0;
 	private transient long lastThrottledAction;
 	private transient long lastActivity = System.currentTimeMillis();
 	private boolean hidden = false;
@@ -310,7 +310,8 @@ public class User extends UserData implements Comparable<User>, IReplyTo, net.es
 		else
 		{
 			nickname = ess.getSettings().getNicknamePrefix() + nick;
-			suffix = "Â§r";
+			// TODO suffix = "§r";
+			suffix = "§r";
 		}
 
 		if (this.getBase().isOp())
@@ -321,7 +322,8 @@ public class User extends UserData implements Comparable<User>, IReplyTo, net.es
 				if (opPrefix != null && opPrefix.toString().length() > 0)
 				{
 					prefix.insert(0, opPrefix.toString());
-					suffix = "Â§r";
+					// TODO suffix = "§r";
+					suffix = "§r";
 				}
 			}
 			catch (Exception e)
@@ -334,15 +336,17 @@ public class User extends UserData implements Comparable<User>, IReplyTo, net.es
 			//These two extra toggles are not documented, because they are mostly redundant #EasterEgg
 			if (!ess.getSettings().disablePrefix())
 			{
-				final String ptext = ess.getPermissionsHandler().getPrefix(base).replace('&', 'Â§');
+				// TODO final String ptext = ess.getPermissionsHandler().getPrefix(base).replace("&", "§");
+				final String ptext = ess.getPermissionsHandler().getPrefix(base).replace("&", "§");
 				prefix.insert(0, ptext);
-				suffix = "Â§r";
+				// TODO suffix = "§r";
+				suffix = "§r";
 			}
 			if (!ess.getSettings().disableSuffix())
 			{
-				final String stext = ess.getPermissionsHandler().getSuffix(base).replace('&', 'Â§');
-				suffix = stext + "Â§r";
-				suffix = suffix.replace("Â§fÂ§f", "Â§f").replace("Â§fÂ§r", "Â§r").replace("Â§rÂ§r", "Â§r");
+				final String stext = ess.getPermissionsHandler().getSuffix(base).replace("&", "§");
+				suffix = stext + "§r";
+				suffix = suffix.replace("§f§f", "§f").replace("§f§r", "§r").replace("§r§r", "§r");
 			}
 		}
 		final String strPrefix = prefix.toString();
@@ -359,7 +363,7 @@ public class User extends UserData implements Comparable<User>, IReplyTo, net.es
 		{
 			output = FormatUtil.lastCode(strPrefix) + nickname.substring(0, 14);
 		}
-		if (output.charAt(output.length() - 1) == 'Â§')
+		if (new Character(output.charAt(output.length() - 1)).toString() == "§")
 		{
 			output = output.substring(0, output.length() - 1);
 		}
@@ -402,7 +406,11 @@ public class User extends UserData implements Comparable<User>, IReplyTo, net.es
 
 	public long getLastOnlineActivity()
 	{
-		return lastOnlineActivity;
+		try{
+			return lastOnlineActivity;
+		} catch (NullPointerException e){
+			return 1L;
+		}
 	}
 
 	public void setLastOnlineActivity(final long timestamp)

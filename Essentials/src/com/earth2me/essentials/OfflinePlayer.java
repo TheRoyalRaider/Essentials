@@ -1,9 +1,13 @@
 package com.earth2me.essentials;
 
 import static com.earth2me.essentials.I18n.tl;
+
 import java.net.InetSocketAddress;
 import java.util.*;
+
 import org.bukkit.*;
+import org.bukkit.attribute.Attribute;
+import org.bukkit.attribute.AttributeInstance;
 import org.bukkit.block.Block;
 import org.bukkit.conversations.Conversation;
 import org.bukkit.conversations.ConversationAbandonedEvent;
@@ -110,19 +114,16 @@ public class OfflinePlayer implements Player
 	{
 	}
 
-	@Override
 	public Egg throwEgg()
 	{
 		return null;
 	}
 
-	@Override
 	public Snowball throwSnowball()
 	{
 		return null;
 	}
 
-	@Override
 	public Arrow shootArrow()
 	{
 		return null;
@@ -1545,5 +1546,355 @@ public class OfflinePlayer implements Player
 	public Map<String, Object> serialize()
 	{
 		return base.serialize();
+	}
+
+	@Override
+	public MainHand getMainHand() {
+		
+		return null;
+	}
+
+	@Override
+	public boolean isHandRaised() {
+		
+		return false;
+	}
+
+	@Override
+	public InventoryView openMerchant(Villager arg0, boolean arg1) {
+		
+		return null;
+	}
+
+	@Override
+	public InventoryView openMerchant(Merchant arg0, boolean arg1) {
+		
+		return null;
+	}
+
+	@Override
+	public List<Block> getLastTwoTargetBlocks(Set<Material> arg0, int arg1) {
+		
+		return null;
+	}
+
+	@Override
+	public List<Block> getLineOfSight(Set<Material> arg0, int arg1) {
+		
+		return null;
+	}
+
+	@Override
+	public PotionEffect getPotionEffect(PotionEffectType arg0) {
+		
+		return null;
+	}
+
+	@Override
+	public Block getTargetBlock(Set<Material> arg0, int arg1) {
+		
+		return null;
+	}
+
+	@Override
+	public boolean hasAI() {
+		
+		return false;
+	}
+
+	@Override
+	public boolean isCollidable() {
+		
+		return false;
+	}
+
+	@Override
+	public boolean isGliding() {
+		
+		return false;
+	}
+
+	@Override
+	public void setAI(boolean arg0) {
+		
+		
+	}
+
+	@Override
+	public void setCollidable(boolean arg0) {
+		
+		
+	}
+
+	@Override
+	public void setGliding(boolean arg0) {
+		
+		
+	}
+
+	@Override
+	public AttributeInstance getAttribute(Attribute arg0) {
+		
+		return null;
+	}
+
+	@Override
+	public boolean addPassenger(Entity arg0) {
+		
+		return false;
+	}
+
+	@Override
+	public boolean addScoreboardTag(String arg0) {
+		
+		return false;
+	}
+
+	@Override
+	public List<Entity> getPassengers() {
+		
+		return null;
+	}
+
+	@Override
+	public int getPortalCooldown() {
+		
+		return 0;
+	}
+
+	@Override
+	public Set<String> getScoreboardTags() {
+		
+		return null;
+	}
+
+	@Override
+	public boolean hasGravity() {
+		
+		return false;
+	}
+
+	@Override
+	public boolean isGlowing() {
+		
+		return false;
+	}
+
+	@Override
+	public boolean isInvulnerable() {
+		
+		return false;
+	}
+
+	@Override
+	public boolean isSilent() {
+		
+		return false;
+	}
+
+	@Override
+	public boolean removePassenger(Entity arg0) {
+		
+		return false;
+	}
+
+	@Override
+	public boolean removeScoreboardTag(String arg0) {
+		
+		return false;
+	}
+
+	@Override
+	public void setGlowing(boolean arg0) {
+		
+		
+	}
+
+	@Override
+	public void setGravity(boolean arg0) {
+		
+		
+	}
+
+	@Override
+	public void setInvulnerable(boolean arg0) {
+		
+		
+	}
+
+	@Override
+	public void setPortalCooldown(int arg0) {
+		
+		
+	}
+
+	@Override
+	public void setSilent(boolean arg0) {
+		
+		
+	}
+
+	@Override
+	public Entity getSpectatorTarget() {
+		
+		return null;
+	}
+
+	@Override
+	public void playSound(Location arg0, Sound arg1, SoundCategory arg2,
+			float arg3, float arg4) {
+		
+		
+	}
+
+	@Override
+	public void playSound(Location arg0, String arg1, SoundCategory arg2,
+			float arg3, float arg4) {
+		
+		
+	}
+
+	@Override
+	public void resetTitle() {
+		
+		
+	}
+
+	@Override
+	public void sendTitle(String arg0, String arg1) {
+		
+		
+	}
+
+	@Override
+	public void sendTitle(String arg0, String arg1, int arg2, int arg3, int arg4) {
+		
+		
+	}
+
+	@Override
+	public void setResourcePack(String arg0, byte[] arg1) {
+		
+		
+	}
+
+	@Override
+	public void setSpectatorTarget(Entity arg0) {
+		
+		
+	}
+
+	@Override
+	public void spawnParticle(Particle arg0, Location arg1, int arg2) {
+		
+		
+	}
+
+	@Override
+	public <T> void spawnParticle(Particle arg0, Location arg1, int arg2, T arg3) {
+		
+		
+	}
+
+	@Override
+	public void spawnParticle(Particle arg0, double arg1, double arg2,
+			double arg3, int arg4) {
+		
+		
+	}
+
+	@Override
+	public <T> void spawnParticle(Particle arg0, double arg1, double arg2,
+			double arg3, int arg4, T arg5) {
+		
+		
+	}
+
+	@Override
+	public void spawnParticle(Particle arg0, Location arg1, int arg2,
+			double arg3, double arg4, double arg5) {
+		
+		
+	}
+
+	@Override
+	public <T> void spawnParticle(Particle arg0, Location arg1, int arg2,
+			double arg3, double arg4, double arg5, T arg6) {
+		
+		
+	}
+
+	@Override
+	public void spawnParticle(Particle arg0, Location arg1, int arg2,
+			double arg3, double arg4, double arg5, double arg6) {
+		
+		
+	}
+
+	@Override
+	public void spawnParticle(Particle arg0, double arg1, double arg2,
+			double arg3, int arg4, double arg5, double arg6, double arg7) {
+		
+		
+	}
+
+	@Override
+	public <T> void spawnParticle(Particle arg0, Location arg1, int arg2,
+			double arg3, double arg4, double arg5, double arg6, T arg7) {
+		
+		
+	}
+
+	@Override
+	public <T> void spawnParticle(Particle arg0, double arg1, double arg2,
+			double arg3, int arg4, double arg5, double arg6, double arg7, T arg8) {
+		
+		
+	}
+
+	@Override
+	public void spawnParticle(Particle arg0, double arg1, double arg2,
+			double arg3, int arg4, double arg5, double arg6, double arg7,
+			double arg8) {
+		
+		
+	}
+
+	@Override
+	public <T> void spawnParticle(Particle arg0, double arg1, double arg2,
+			double arg3, int arg4, double arg5, double arg6, double arg7,
+			double arg8, T arg9) {
+		
+		
+	}
+
+	@Override
+	public Spigot spigot() {
+		
+		return null;
+	}
+
+	@Override
+	public void stopSound(Sound arg0) {
+		
+		
+	}
+
+	@Override
+	public void stopSound(String arg0) {
+		
+		
+	}
+
+	@Override
+	public void stopSound(Sound arg0, SoundCategory arg1) {
+		
+		
+	}
+
+	@Override
+	public void stopSound(String arg0, SoundCategory arg1) {
+		
+		
 	}
 }

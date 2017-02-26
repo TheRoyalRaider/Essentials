@@ -145,6 +145,7 @@ public class PermissionsHandler implements IPermissionsHandler
 			return;
 		}
 
+		/** Removed due to incompatibility
 		final Plugin simplyPermsPlugin = pluginManager.getPlugin("SimplyPerms");
 		if (simplyPermsPlugin != null && simplyPermsPlugin.isEnabled())
 		{
@@ -165,7 +166,7 @@ public class PermissionsHandler implements IPermissionsHandler
 				handler = new PrivilegesHandler(privPlugin);
 			}
 			return;
-		}
+		}**/
 
 		final Plugin bPermPlugin = pluginManager.getPlugin("bPermissions");
 		if (bPermPlugin != null && bPermPlugin.isEnabled())

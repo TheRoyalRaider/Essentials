@@ -11,6 +11,7 @@ import java.util.Map.Entry;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.regex.Pattern;
+
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
@@ -47,6 +48,7 @@ public class YamlStorageWriter implements IStorageWriter
 		}
 	}
 
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	private void writeToFile(final Object object, final int depth, final Class clazz) throws IllegalAccessException
 	{
 		for (Field field : clazz.getDeclaredFields())
@@ -164,6 +166,7 @@ public class YamlStorageWriter implements IStorageWriter
 		writer.println();
 	}
 
+	@SuppressWarnings("unchecked")
 	private void writeMap(final Map<Object, Object> data, final int depth) throws IllegalArgumentException, IllegalAccessException
 	{
 		writer.println();
@@ -283,6 +286,7 @@ public class YamlStorageWriter implements IStorageWriter
 		writer.print(data.toString().toLowerCase(Locale.ENGLISH));
 	}
 
+	@SuppressWarnings("deprecation")
 	private void writeMaterialData(final Object data)
 	{
 		final MaterialData matData = (MaterialData)data;
@@ -307,6 +311,7 @@ public class YamlStorageWriter implements IStorageWriter
 		}
 	}
 
+	@SuppressWarnings("unchecked")
 	private void writeEnchantmentLevel(Object data)
 	{
 		final Entry<Enchantment, Integer> enchLevel = (Entry<Enchantment, Integer>)data;

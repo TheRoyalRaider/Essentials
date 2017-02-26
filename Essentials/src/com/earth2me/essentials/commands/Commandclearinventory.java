@@ -1,12 +1,16 @@
 package com.earth2me.essentials.commands;
 
 import com.earth2me.essentials.CommandSource;
+
 import static com.earth2me.essentials.I18n.tl;
+
 import com.earth2me.essentials.User;
 import com.earth2me.essentials.utils.NumberUtil;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Locale;
+
 import org.bukkit.Server;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
@@ -65,6 +69,7 @@ public class Commandclearinventory extends EssentialsCommand
 		}
 	}
 
+	@SuppressWarnings("deprecation")
 	protected void clearHandler(CommandSource sender, Player player, String[] args, int offset, boolean showExtended) throws Exception
 	{
 		short data = -1;

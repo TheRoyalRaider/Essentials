@@ -3,6 +3,7 @@ package com.earth2me.essentials.api;
 import static com.earth2me.essentials.I18n.tl;
 
 
+@SuppressWarnings("serial")
 public class InvalidWorldException extends Exception
 {
 	private final String world;

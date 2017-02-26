@@ -5,6 +5,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Set;
 import java.util.UUID;
+
 import org.bukkit.*;
 import org.bukkit.block.Biome;
 import org.bukkit.block.Block;
@@ -12,8 +13,10 @@ import org.bukkit.entity.*;
 import org.bukkit.generator.BlockPopulator;
 import org.bukkit.generator.ChunkGenerator;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.material.MaterialData;
 import org.bukkit.metadata.MetadataValue;
 import org.bukkit.plugin.Plugin;
+import org.bukkit.util.Consumer;
 import org.bukkit.util.Vector;
 
 
@@ -186,12 +189,6 @@ public class FakeWorld implements World
 
 	@Override
 	public boolean generateTree(Location lctn, TreeType tt, BlockChangeDelegate bcd)
-	{
-		throw new UnsupportedOperationException("Not supported yet.");
-	}
-
-	@Override
-	public LivingEntity spawnCreature(Location lctn, CreatureType ct)
 	{
 		throw new UnsupportedOperationException("Not supported yet.");
 	}
@@ -586,7 +583,6 @@ public class FakeWorld implements World
 		throw new UnsupportedOperationException("Not supported yet.");
 	}
 
-	@Override
 	public LivingEntity spawnCreature(Location arg0, EntityType arg1)
 	{
 		throw new UnsupportedOperationException("Not supported yet.");
@@ -740,5 +736,149 @@ public class FakeWorld implements World
 	public boolean createExplosion(double d, double d1, double d2, float f, boolean bln, boolean bln1)
 	{
 		throw new UnsupportedOperationException("Not supported yet.");
+	}
+
+	@Override
+	public Collection<Entity> getNearbyEntities(Location arg0, double arg1,
+			double arg2, double arg3) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public WorldBorder getWorldBorder() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void playSound(Location arg0, String arg1, float arg2, float arg3) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void playSound(Location arg0, Sound arg1, SoundCategory arg2,
+			float arg3, float arg4) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void playSound(Location arg0, String arg1, SoundCategory arg2,
+			float arg3, float arg4) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public <T extends Entity> T spawn(Location arg0, Class<T> arg1,
+			Consumer<T> arg2) throws IllegalArgumentException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public <T extends Arrow> T spawnArrow(Location arg0, Vector arg1,
+			float arg2, float arg3, Class<T> arg4) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public FallingBlock spawnFallingBlock(Location arg0, MaterialData arg1)
+			throws IllegalArgumentException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void spawnParticle(Particle arg0, Location arg1, int arg2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public <T> void spawnParticle(Particle arg0, Location arg1, int arg2, T arg3) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void spawnParticle(Particle arg0, double arg1, double arg2,
+			double arg3, int arg4) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public <T> void spawnParticle(Particle arg0, double arg1, double arg2,
+			double arg3, int arg4, T arg5) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void spawnParticle(Particle arg0, Location arg1, int arg2,
+			double arg3, double arg4, double arg5) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public <T> void spawnParticle(Particle arg0, Location arg1, int arg2,
+			double arg3, double arg4, double arg5, T arg6) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void spawnParticle(Particle arg0, Location arg1, int arg2,
+			double arg3, double arg4, double arg5, double arg6) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void spawnParticle(Particle arg0, double arg1, double arg2,
+			double arg3, int arg4, double arg5, double arg6, double arg7) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public <T> void spawnParticle(Particle arg0, Location arg1, int arg2,
+			double arg3, double arg4, double arg5, double arg6, T arg7) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public <T> void spawnParticle(Particle arg0, double arg1, double arg2,
+			double arg3, int arg4, double arg5, double arg6, double arg7, T arg8) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void spawnParticle(Particle arg0, double arg1, double arg2,
+			double arg3, int arg4, double arg5, double arg6, double arg7,
+			double arg8) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public <T> void spawnParticle(Particle arg0, double arg1, double arg2,
+			double arg3, int arg4, double arg5, double arg6, double arg7,
+			double arg8, T arg9) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Spigot spigot() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

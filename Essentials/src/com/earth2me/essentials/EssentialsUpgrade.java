@@ -1,12 +1,14 @@
 package com.earth2me.essentials;
 
 import static com.earth2me.essentials.I18n.tl;
+
 import com.earth2me.essentials.craftbukkit.BanLookup;
 import com.earth2me.essentials.craftbukkit.FakeWorld;
 import com.earth2me.essentials.settings.Spawns;
 import com.earth2me.essentials.storage.YamlStorageWriter;
 import com.earth2me.essentials.utils.StringUtil;
 import com.google.common.base.Charsets;
+
 import java.io.*;
 import java.math.BigInteger;
 import java.security.DigestInputStream;
@@ -14,7 +16,9 @@ import java.security.MessageDigest;
 import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import net.ess3.api.IEssentials;
+
 import org.bukkit.BanList;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
@@ -82,6 +86,7 @@ public class EssentialsUpgrade
 		}
 	}
 
+	@SuppressWarnings("unused")
 	private void removeLinesFromConfig(File file, String regex, String info) throws Exception
 	{
 		boolean needUpdate = false;
@@ -166,7 +171,6 @@ public class EssentialsUpgrade
 				config.load();
 				if (config.hasProperty("powertools"))
 				{
-					@SuppressWarnings("unchecked")
 					final Map<String, Object> powertools = config.getConfigurationSection("powertools").getValues(false);
 					if (powertools == null)
 					{
@@ -220,7 +224,6 @@ public class EssentialsUpgrade
 				config.load();
 				if (config.hasProperty("home") && config.hasProperty("home.default"))
 				{
-					@SuppressWarnings("unchecked")
 					final String defworld = (String)config.getProperty("home.default");
 					final Location defloc = getFakeLocation(config, "home.worlds." + defworld);
 					if (defloc != null)
@@ -523,6 +526,7 @@ public class EssentialsUpgrade
 			countFiles++;
 
 			final String name = string.substring(0, string.length() - 4);
+			@SuppressWarnings("unused")
 			UUID uuid = null;
 
 			try
@@ -563,6 +567,7 @@ public class EssentialsUpgrade
 		doneFile.save();
 	}
 
+	@SuppressWarnings("deprecation")
 	public static void uuidFileConvert(IEssentials ess, Boolean ignoreUFCache)
 	{
 		ess.getLogger().info("Starting Essentials UUID userdata conversion");

@@ -1,7 +1,10 @@
 package com.earth2me.essentials.signs;
 
+import java.util.Set;
 import java.util.logging.Level;
+
 import net.ess3.api.IEssentials;
+
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.block.Sign;
@@ -43,7 +46,7 @@ public class SignPlayerListener implements Listener
 			Block targetBlock = null;
 			try
 			{
-				targetBlock = event.getPlayer().getTargetBlock(null, 5);
+				targetBlock = event.getPlayer().getTargetBlock((Set<Material>)null, 5);
 			}
 			catch (IllegalStateException ex)
 			{

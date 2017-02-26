@@ -1,10 +1,11 @@
 package com.earth2me.essentials.commands;
 
 import static com.earth2me.essentials.I18n.tl;
+
 import com.earth2me.essentials.MetaItemStack;
 import com.earth2me.essentials.User;
 import com.earth2me.essentials.utils.NumberUtil;
-import java.util.regex.Pattern;
+
 import org.bukkit.FireworkEffect;
 import org.bukkit.Material;
 import org.bukkit.Server;
@@ -38,6 +39,7 @@ public class Commandfirework extends EssentialsCommand
 		super("firework");
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	protected void run(final Server server, final User user, final String commandLabel, final String[] args) throws Exception
 	{

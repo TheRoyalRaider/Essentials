@@ -96,7 +96,30 @@ public class EssentialsTimer implements Runnable
 				}
 			}
 			final User user = ess.getUser(iterator.next());
-			if (user.getLastOnlineActivity() < currentTime && user.getLastOnlineActivity() > user.getLastLogout())
+			long active = 1;
+			try{
+				active = user
+						.getLastOnlineActivity();
+			}
+			catch(NullPointerException e){
+				active = 1;
+			}
+			long userlogout = 1;
+			try{
+				userlogout = user.getLastLogout();
+			}
+			catch(NullPointerException e){
+				userlogout = 1;
+			}
+			if (
+					active 
+					< 
+					currentTime 
+					&& 
+					active
+					> 
+					userlogout
+					)
 			{
 				if (!user.isHidden()) {
 					user.setLastLogout(user.getLastOnlineActivity());
@@ -104,9 +127,15 @@ public class EssentialsTimer implements Runnable
 				iterator.remove();
 				continue;
 			}
-			user.checkMuteTimeout(currentTime);
-			user.checkJailTimeout(currentTime);
-			user.resetInvulnerabilityAfterTeleport();
+			try{
+				user.checkMuteTimeout(currentTime);
+			} catch(NullPointerException e){}
+			try{
+				user.checkJailTimeout(currentTime);
+			} catch(NullPointerException e){}
+			try{
+				user.resetInvulnerabilityAfterTeleport();
+			} catch(NullPointerException e){}
 		}
 	}
 	

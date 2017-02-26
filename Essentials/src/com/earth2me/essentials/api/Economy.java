@@ -1,20 +1,8 @@
 package com.earth2me.essentials.api;
 
-import com.earth2me.essentials.EssentialsConf;
 import com.earth2me.essentials.EssentialsUserConf;
-import static com.earth2me.essentials.I18n.tl;
 import com.earth2me.essentials.Trade;
 import com.earth2me.essentials.User;
-import static com.earth2me.essentials.api.Economy.add;
-import static com.earth2me.essentials.api.Economy.divide;
-import static com.earth2me.essentials.api.Economy.format;
-import static com.earth2me.essentials.api.Economy.getMoneyExact;
-import static com.earth2me.essentials.api.Economy.hasEnough;
-import static com.earth2me.essentials.api.Economy.hasLess;
-import static com.earth2me.essentials.api.Economy.hasMore;
-import static com.earth2me.essentials.api.Economy.multiply;
-import static com.earth2me.essentials.api.Economy.setMoney;
-import static com.earth2me.essentials.api.Economy.substract;
 import com.earth2me.essentials.utils.NumberUtil;
 import com.earth2me.essentials.utils.StringUtil;
 import com.google.common.base.Charsets;

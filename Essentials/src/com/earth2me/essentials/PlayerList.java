@@ -1,7 +1,9 @@
 package com.earth2me.essentials;
 
 import static com.earth2me.essentials.I18n.tl;
+
 import com.earth2me.essentials.utils.FormatUtil;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -9,8 +11,8 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
+
 import org.bukkit.Server;
-import org.bukkit.entity.Player;
 
 
 public class PlayerList
@@ -73,6 +75,7 @@ public class PlayerList
 	}
 
 	// Build the basic player list, divided by groups.
+	@SuppressWarnings("unused")
 	public static Map<String, List<User>> getPlayerLists(final IEssentials ess, final User sender, final boolean showHidden)
 	{
 		Server server = ess.getServer();

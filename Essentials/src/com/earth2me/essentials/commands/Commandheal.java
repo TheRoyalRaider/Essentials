@@ -1,8 +1,11 @@
 package com.earth2me.essentials.commands;
 
 import com.earth2me.essentials.CommandSource;
+
 import static com.earth2me.essentials.I18n.tl;
+
 import com.earth2me.essentials.User;
+
 import org.bukkit.Server;
 import org.bukkit.entity.Player;
 import org.bukkit.event.entity.EntityRegainHealthEvent;
@@ -59,6 +62,7 @@ public class Commandheal extends EssentialsLoopCommand
 		}
 	}
 
+	@SuppressWarnings("deprecation")
 	private void healPlayer(final User user) throws PlayerExemptException, QuietAbortException
 	{
 		final Player player = user.getBase();

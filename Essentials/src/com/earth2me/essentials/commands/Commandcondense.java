@@ -4,7 +4,6 @@ import static com.earth2me.essentials.I18n.tl;
 import java.util.*;
 import org.bukkit.Material;
 import org.bukkit.Server;
-import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.Recipe;
 import org.bukkit.inventory.ShapedRecipe;

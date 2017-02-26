@@ -9,20 +9,27 @@ import java.util.*;
 import java.util.concurrent.Callable;
 import java.util.concurrent.Future;
 import java.util.logging.Logger;
+
 import org.bukkit.*;
 import org.bukkit.Warning.WarningState;
 import org.bukkit.World.Environment;
+import org.bukkit.boss.BarColor;
+import org.bukkit.boss.BarFlag;
+import org.bukkit.boss.BarStyle;
+import org.bukkit.boss.BossBar;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.command.PluginCommand;
 import org.bukkit.conversations.Conversation;
 import org.bukkit.conversations.ConversationAbandonedEvent;
+import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.generator.ChunkGenerator.ChunkData;
 import org.bukkit.help.HelpMap;
 import org.bukkit.inventory.*;
 import org.bukkit.map.MapView;
@@ -40,6 +47,7 @@ import org.bukkit.plugin.RegisteredListener;
 import org.bukkit.plugin.ServicesManager;
 import org.bukkit.plugin.UnknownDependencyException;
 import org.bukkit.plugin.messaging.Messenger;
+import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.scheduler.BukkitScheduler;
 import org.bukkit.scheduler.BukkitTask;
 import org.bukkit.scheduler.BukkitWorker;
@@ -308,6 +316,70 @@ public class FakeServer implements Server
 			public int scheduleAsyncDelayedTask(Plugin plugin, Runnable r)
 			{
 				throw new UnsupportedOperationException("Not supported yet.");
+			}
+
+			@Override
+			public BukkitTask runTask(Plugin arg0, BukkitRunnable arg1)
+					throws IllegalArgumentException {
+				
+				return null;
+			}
+
+			@Override
+			public BukkitTask runTaskAsynchronously(Plugin arg0,
+					BukkitRunnable arg1) throws IllegalArgumentException {
+				
+				return null;
+			}
+
+			@Override
+			public BukkitTask runTaskLater(Plugin arg0, BukkitRunnable arg1,
+					long arg2) throws IllegalArgumentException {
+				
+				return null;
+			}
+
+			@Override
+			public BukkitTask runTaskLaterAsynchronously(Plugin arg0,
+					BukkitRunnable arg1, long arg2)
+					throws IllegalArgumentException {
+				
+				return null;
+			}
+
+			@Override
+			public BukkitTask runTaskTimer(Plugin arg0, BukkitRunnable arg1,
+					long arg2, long arg3) throws IllegalArgumentException {
+				
+				return null;
+			}
+
+			@Override
+			public BukkitTask runTaskTimerAsynchronously(Plugin arg0,
+					BukkitRunnable arg1, long arg2, long arg3)
+					throws IllegalArgumentException {
+				
+				return null;
+			}
+
+			@Override
+			public int scheduleSyncDelayedTask(Plugin arg0, BukkitRunnable arg1) {
+				
+				return 0;
+			}
+
+			@Override
+			public int scheduleSyncDelayedTask(Plugin arg0,
+					BukkitRunnable arg1, long arg2) {
+				
+				return 0;
+			}
+
+			@Override
+			public int scheduleSyncRepeatingTask(Plugin arg0,
+					BukkitRunnable arg1, long arg2, long arg3) {
+				
+				return 0;
 			}
 		};
 	}
@@ -823,6 +895,7 @@ public class FakeServer implements Server
 		};
 	}
 
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@Override
 	public Set getOperators()
 	{
@@ -871,7 +944,6 @@ public class FakeServer implements Server
 		throw new UnsupportedOperationException("Not supported yet.");
 	}
 
-	@Override
 	public boolean useExactLoginLocation()
 	{
 		throw new UnsupportedOperationException("Not supported yet.");
@@ -1045,6 +1117,7 @@ public class FakeServer implements Server
 		throw new UnsupportedOperationException("Not supported yet.");
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public UnsafeValues getUnsafe()
 	{
@@ -1283,5 +1356,37 @@ public class FakeServer implements Server
 		{
 			throw new UnsupportedOperationException("Not supported yet.");
 		}
+	}
+
+
+	@Override
+	public BossBar createBossBar(String arg0, BarColor arg1, BarStyle arg2,
+			BarFlag... arg3) {
+		
+		return null;
+	}
+
+	@Override
+	public ChunkData createChunkData(World arg0) {
+		
+		return null;
+	}
+
+	@Override
+	public Merchant createMerchant(String arg0) {
+		
+		return null;
+	}
+
+	@Override
+	public Entity getEntity(UUID arg0) {
+		
+		return null;
+	}
+
+	@Override
+	public Spigot spigot() {
+		
+		return null;
 	};
 }

@@ -1,9 +1,14 @@
 package com.earth2me.essentials;
 
 import static com.earth2me.essentials.I18n.tl;
-import com.earth2me.essentials.utils.StringUtil;
-import java.util.*;
+
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Locale;
+import java.util.Random;
 import java.util.logging.Logger;
+
 import org.bukkit.DyeColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Ageable;
@@ -26,6 +31,8 @@ import org.bukkit.inventory.EntityEquipment;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.material.Colorable;
 
+import com.earth2me.essentials.utils.StringUtil;
+
 
 public enum MobData
 {
@@ -42,11 +49,16 @@ public enum MobData
 	TAMED_TAMEABLE("tamed", Tameable.class, Data.TAMED, true),
 	TAME_TAMEABLE("tame", Tameable.class, Data.TAMED, false),
 	RANDOM_SHEEP("random", EntityType.SHEEP, Data.COLORABLE, true),
-	COLORABLE_SHEEP("", StringUtil.joinList(DyeColor.values()).toLowerCase(Locale.ENGLISH), EntityType.SHEEP, Data.COLORABLE, true),
+	COLORABLE_SHEEP("", StringUtil.joinList((Object[])DyeColor.values()).toLowerCase(Locale.ENGLISH), EntityType.SHEEP, Data.COLORABLE, true),
+	@SuppressWarnings("deprecation")
 	DONKEY_HORSE("donkey", EntityType.HORSE, Horse.Variant.DONKEY, true),
+	@SuppressWarnings("deprecation")
 	MULE_HORSE("mule", EntityType.HORSE, Horse.Variant.MULE, true),
+	@SuppressWarnings("deprecation")
 	SKELETON_HORSE("skeleton", EntityType.HORSE, Horse.Variant.SKELETON_HORSE, true),
+	@SuppressWarnings("deprecation")
 	UNDEAD_HORSE("undead", EntityType.HORSE, Horse.Variant.UNDEAD_HORSE, true),
+	@SuppressWarnings("deprecation")
 	ZOMBIE_HORSE("zombie", EntityType.HORSE, Horse.Variant.UNDEAD_HORSE, false),
 	POLKA_HORSE("polka", EntityType.HORSE, Horse.Style.BLACK_DOTS, true),
 	SOOTY_HORSE("sooty", EntityType.HORSE, Horse.Style.BLACK_DOTS, false),
@@ -159,6 +171,7 @@ public enum MobData
 	final private boolean isPublic;
 	private String matched;
 
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public static LinkedHashMap<String, MobData> getPossibleData(final Entity spawned, boolean publicOnly)
 	{
 		LinkedHashMap<String, MobData> mobList = new LinkedHashMap<String, MobData>();
@@ -212,6 +225,7 @@ public enum MobData
 		return this.matched;
 	}
 
+	@SuppressWarnings("deprecation")
 	public void setData(final Entity spawned, final Player target, final String rawData) throws Exception
 	{
 		if (this.value.equals(Data.ANGRY))

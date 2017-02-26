@@ -4,6 +4,7 @@ import java.io.Reader;
 import java.lang.reflect.Field;
 import java.util.*;
 import java.util.concurrent.locks.ReentrantLock;
+
 import org.bukkit.plugin.Plugin;
 import org.yaml.snakeyaml.TypeDescription;
 import org.yaml.snakeyaml.Yaml;
@@ -12,7 +13,9 @@ import org.yaml.snakeyaml.constructor.Constructor;
 
 public class YamlStorageReader implements IStorageReader
 {
+	@SuppressWarnings("rawtypes")
 	private transient static final Map<Class, Yaml> PREPARED_YAMLS = Collections.synchronizedMap(new HashMap<Class, Yaml>());
+	@SuppressWarnings("rawtypes")
 	private transient static final Map<Class, ReentrantLock> LOCKS = new HashMap<Class, ReentrantLock>();
 	private transient final Reader reader;
 	private transient final Plugin plugin;
@@ -23,6 +26,7 @@ public class YamlStorageReader implements IStorageReader
 		this.plugin = plugin;
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public <T extends StorageObject> T load(final Class<? extends T> clazz) throws ObjectLoadException
 	{
@@ -64,6 +68,7 @@ public class YamlStorageReader implements IStorageReader
 		}
 	}
 
+	@SuppressWarnings("rawtypes")
 	private Constructor prepareConstructor(final Class<?> clazz)
 	{
 		final Constructor constructor = new BukkitConstructor(clazz, plugin);
@@ -73,6 +78,7 @@ public class YamlStorageReader implements IStorageReader
 		return constructor;
 	}
 
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	private void prepareConstructor(final Constructor constructor, final Set<Class> classes, final Class clazz)
 	{
 		classes.add(clazz);
@@ -90,6 +96,7 @@ public class YamlStorageReader implements IStorageReader
 		constructor.addTypeDescription(description);
 	}
 
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	private void prepareList(final Field field, final TypeDescription description, final Set<Class> classes, final Constructor constructor)
 	{
 		final ListType listType = field.getAnnotation(ListType.class);
@@ -104,6 +111,7 @@ public class YamlStorageReader implements IStorageReader
 		}
 	}
 
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	private void prepareMap(final Field field, final TypeDescription description, final Set<Class> classes, final Constructor constructor)
 	{
 		final MapValueType mapType = field.getAnnotation(MapValueType.class);

@@ -1,14 +1,18 @@
 package com.earth2me.essentials.commands;
 
 import com.earth2me.essentials.Enchantments;
+
 import static com.earth2me.essentials.I18n.tl;
+
 import com.earth2me.essentials.MetaItemStack;
 import com.earth2me.essentials.User;
 import com.earth2me.essentials.utils.StringUtil;
+
 import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
+
 import org.bukkit.Material;
 import org.bukkit.Server;
 import org.bukkit.enchantments.Enchantment;
@@ -23,6 +27,7 @@ public class Commandenchant extends EssentialsCommand
 	}
 
 	//TODO: Implement charge costs: final Trade charge = new Trade("enchant-" + enchantmentName, ess);
+	@SuppressWarnings("deprecation")
 	@Override
 	protected void run(final Server server, final User user, final String commandLabel, final String[] args) throws Exception
 	{

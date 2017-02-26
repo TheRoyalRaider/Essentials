@@ -57,6 +57,10 @@ public class Commandgc extends EssentialsCommand
 			case THE_END:
 				worldType = "The End";
 				break;
+			case NORMAL:
+				break;
+			default:
+				break;
 			}
 
 			int tileEntities = 0;

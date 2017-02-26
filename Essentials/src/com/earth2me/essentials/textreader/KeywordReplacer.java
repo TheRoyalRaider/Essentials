@@ -2,14 +2,16 @@ package com.earth2me.essentials.textreader;
 
 import com.earth2me.essentials.CommandSource;
 import com.earth2me.essentials.ExecuteTimer;
+
 import static com.earth2me.essentials.I18n.tl;
+
 import com.earth2me.essentials.PlayerList;
 import com.earth2me.essentials.User;
-import static com.earth2me.essentials.textreader.KeywordType.DISPLAYNAME;
-import static com.earth2me.essentials.textreader.KeywordType.PLAYER;
+
 import com.earth2me.essentials.utils.DateUtil;
 import com.earth2me.essentials.utils.DescParseTickFormat;
 import com.earth2me.essentials.utils.NumberUtil;
+
 import java.lang.management.ManagementFactory;
 import java.text.DateFormat;
 import java.util.ArrayList;
@@ -22,7 +24,9 @@ import java.util.Map;
 import java.util.logging.Level;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 import net.ess3.api.IEssentials;
+
 import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.entity.Player;
@@ -92,6 +96,7 @@ public class KeywordReplacer implements IText
 		}
 	}
 
+	@SuppressWarnings("unchecked")
 	private String replaceLine(String line, final String fullMatch, final String[] matchTokens, final User user)
 	{
 		final String keyword = matchTokens[0];

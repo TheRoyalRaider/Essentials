@@ -18,6 +18,7 @@
 package com.earth2me.essentials;
 
 import static com.earth2me.essentials.I18n.tl;
+
 import com.earth2me.essentials.commands.EssentialsCommand;
 import com.earth2me.essentials.commands.IEssentialsCommand;
 import com.earth2me.essentials.commands.NoChargeException;
@@ -38,6 +39,7 @@ import com.earth2me.essentials.utils.DateUtil;
 import com.google.common.base.Function;
 import com.google.common.base.Throwables;
 import com.google.common.collect.Iterables;
+
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
@@ -52,11 +54,13 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 import net.ess3.api.Economy;
 import net.ess3.api.IEssentials;
 import net.ess3.api.IItemDb;
 import net.ess3.api.IJails;
 import net.ess3.api.ISettings;
+
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Server;
@@ -113,6 +117,7 @@ public class Essentials extends JavaPlugin implements net.ess3.api.IEssentials
 	{
 	}
 
+	@SuppressWarnings("deprecation")
 	public Essentials(final Server server)
 	{
 		super(new JavaPluginLoader(server), new PluginDescriptionFile("Essentials", "", "com.earth2me.essentials.Essentials"), null, null);
@@ -148,6 +153,12 @@ public class Essentials extends JavaPlugin implements net.ess3.api.IEssentials
 		confList = new ArrayList<IConf>();
 		jails = new Jails(this);
 		registerListeners(server.getPluginManager());
+	}
+
+	private void initialize(Object object, Server server,
+			PluginDescriptionFile pluginDescriptionFile, File dataFolder,
+			Object object2, Object object3) {
+		
 	}
 
 	@Override
@@ -906,6 +917,7 @@ public class Essentials extends JavaPlugin implements net.ess3.api.IEssentials
 		return vanishedPlayers;
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public Collection<Player> getOnlinePlayers()
 	{

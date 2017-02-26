@@ -1,7 +1,9 @@
 package com.earth2me.essentials.commands;
 
 import com.earth2me.essentials.CommandSource;
+
 import static com.earth2me.essentials.I18n.tl;
+
 import org.bukkit.Material;
 import org.bukkit.Server;
 import org.bukkit.inventory.ItemStack;
@@ -14,6 +16,7 @@ public class Commanditemdb extends EssentialsCommand
 		super("itemdb");
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	protected void run(Server server, CommandSource sender, String commandLabel, String[] args) throws Exception
 	{

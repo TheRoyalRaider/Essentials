@@ -5,7 +5,6 @@ import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.RemovalCause;
-import com.google.common.cache.RemovalListener;
 import com.google.common.cache.RemovalNotification;
 import com.google.common.util.concurrent.UncheckedExecutionException;
 import java.io.File;
@@ -114,11 +113,8 @@ public class UserMap extends CacheLoader<String, User> implements IConf
 	{
 		try
 		{
-			return users.get(uuid.toString());
-		}
-		catch (ExecutionException ex)
-		{
-			return null;
+			//return users.get(uuid.toString(), null);
+			return users.getIfPresent(uuid.toString());
 		}
 		catch (UncheckedExecutionException ex)
 		{
