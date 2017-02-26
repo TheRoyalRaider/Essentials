@@ -1,9 +1,13 @@
 package com.earth2me.essentials.antibuild;
 
 import static com.earth2me.essentials.I18n.tl;
+
 import com.earth2me.essentials.User;
+
 import net.ess3.api.IEssentials;
+
 import java.util.logging.Level;
+
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Entity;
@@ -33,6 +37,7 @@ public class EssentialsAntiBuildListener implements Listener
 		this.ess = prot.getEssentialsConnect().getEssentials();
 	}
 
+	@SuppressWarnings("deprecation")
 	private boolean metaPermCheck(final User user, final String action, final Block block)
 	{
 		if (block == null)
@@ -72,6 +77,7 @@ public class EssentialsAntiBuildListener implements Listener
 		return user.isAuthorized(blockPerm);
 	}
 
+	@SuppressWarnings("deprecation")
 	@EventHandler(priority = EventPriority.HIGHEST, ignoreCancelled = true)
 	public void onBlockPlace(final BlockPlaceEvent event)
 	{
@@ -108,6 +114,7 @@ public class EssentialsAntiBuildListener implements Listener
 		}
 	}
 
+	@SuppressWarnings("deprecation")
 	@EventHandler(priority = EventPriority.HIGHEST, ignoreCancelled = true)
 	public void onBlockBreak(final BlockBreakEvent event)
 	{
@@ -145,6 +152,7 @@ public class EssentialsAntiBuildListener implements Listener
 		}
 	}
 
+	@SuppressWarnings("deprecation")
 	@EventHandler(priority = EventPriority.HIGHEST, ignoreCancelled = true)
 	public void onHangingBreak(final HangingBreakByEntityEvent event)
 	{
@@ -176,6 +184,7 @@ public class EssentialsAntiBuildListener implements Listener
 		}
 	}
 
+	@SuppressWarnings("deprecation")
 	@EventHandler(priority = EventPriority.HIGHEST, ignoreCancelled = true)
 	public void onBlockPistonExtend(final BlockPistonExtendEvent event)
 	{
@@ -189,6 +198,7 @@ public class EssentialsAntiBuildListener implements Listener
 		}
 	}
 
+	@SuppressWarnings("deprecation")
 	@EventHandler(priority = EventPriority.HIGHEST, ignoreCancelled = true)
 	public void onBlockPistonRetract(final BlockPistonRetractEvent event)
 	{
@@ -203,6 +213,7 @@ public class EssentialsAntiBuildListener implements Listener
 		}
 	}
 
+	@SuppressWarnings("deprecation")
 	@EventHandler(priority = EventPriority.LOW)
 	public void onPlayerInteract(final PlayerInteractEvent event)
 	{
@@ -251,6 +262,7 @@ public class EssentialsAntiBuildListener implements Listener
 		}
 	}
 
+	@SuppressWarnings("deprecation")
 	@EventHandler(priority = EventPriority.LOW, ignoreCancelled = true)
 	public void onCraftItemEvent(final CraftItemEvent event)
 	{
@@ -275,6 +287,7 @@ public class EssentialsAntiBuildListener implements Listener
 		}
 	}
 
+	@SuppressWarnings("deprecation")
 	@EventHandler(priority = EventPriority.LOW, ignoreCancelled = true)
 	public void onPlayerPickupItem(PlayerPickupItemEvent event)
 	{
@@ -292,6 +305,7 @@ public class EssentialsAntiBuildListener implements Listener
 		}
 	}
 
+	@SuppressWarnings("deprecation")
 	@EventHandler(priority = EventPriority.LOW, ignoreCancelled = true)
 	public void onPlayerDropItem(final PlayerDropItemEvent event)
 	{
@@ -313,6 +327,7 @@ public class EssentialsAntiBuildListener implements Listener
 		}
 	}
 
+	@SuppressWarnings("deprecation")
 	@EventHandler(priority = EventPriority.HIGHEST, ignoreCancelled = true)
 	public void onBlockDispense(final BlockDispenseEvent event)
 	{
