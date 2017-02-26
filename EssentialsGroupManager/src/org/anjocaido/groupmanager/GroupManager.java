@@ -12,6 +12,7 @@ import org.anjocaido.groupmanager.data.Variables;
 import org.anjocaido.groupmanager.data.User;
 import org.anjocaido.groupmanager.data.Group;
 import org.anjocaido.groupmanager.dataholder.OverloadedWorldHolder;
+
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
@@ -24,6 +25,7 @@ import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import org.anjocaido.groupmanager.dataholder.worlds.WorldsHolder;
 import org.anjocaido.groupmanager.events.GMSystemEvent;
 import org.anjocaido.groupmanager.events.GMWorldListener;
@@ -2187,6 +2189,7 @@ public class GroupManager extends JavaPlugin {
 	 * @param playerName, sender
 	 * @return true if a single match is found
 	 */
+	@SuppressWarnings("deprecation")
 	private List<String> validatePlayer(String playerName, CommandSender sender) {
 
 		List<Player> players = new ArrayList<Player>();
