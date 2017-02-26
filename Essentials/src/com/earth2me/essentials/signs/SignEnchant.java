@@ -29,19 +29,19 @@ public class SignEnchant extends EssentialsSign
 		}
 		catch (SignException e)
 		{
-			sign.setLine(1, "Â§c<item|any>");
+			sign.setLine(1, "§c<item|any>");
 			throw e;
 		}
 		final String[] enchantLevel = sign.getLine(2).split(":");
 		if (enchantLevel.length != 2)
 		{
-			sign.setLine(2, "Â§c<enchant>");
+			sign.setLine(2, "§c<enchant>");
 			throw new SignException(tl("invalidSignLine", 3));
 		}
 		final Enchantment enchantment = Enchantments.getByName(enchantLevel[0]);
 		if (enchantment == null)
 		{
-			sign.setLine(2, "Â§c<enchant>");
+			sign.setLine(2, "§c<enchant>");
 			throw new SignException(tl("enchantmentNotFound"));
 		}
 		int level;
@@ -51,7 +51,7 @@ public class SignEnchant extends EssentialsSign
 		}
 		catch (NumberFormatException ex)
 		{
-			sign.setLine(2, "Â§c<enchant>");
+			sign.setLine(2, "§c<enchant>");
 			throw new SignException(ex.getMessage(), ex);
 		}
 		final boolean allowUnsafe = ess.getSettings().allowUnsafeEnchantments() 

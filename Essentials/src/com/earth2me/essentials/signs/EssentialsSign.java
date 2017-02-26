@@ -40,7 +40,7 @@ public class EssentialsSign
 			  || user.isAuthorized("essentials.signs.create." + signName.toLowerCase(Locale.ENGLISH))))
 		{
 			// Return true, so other plugins can use the same sign title, just hope
-			// they won't change it to ยง1[Signname]
+			// they won't change it to ง1[Signname]
 			return true;
 		}
 		sign.setLine(0, tl("signFormatFail", this.signName));
@@ -286,7 +286,7 @@ public class EssentialsSign
 
 	public static boolean isValidSign(final ISign sign)
 	{
-		return sign.getLine(0).matches("ยง1\\[.*\\]");
+		return sign.getLine(0).matches("ง1\\[.*\\]");
 	}
 
 	protected boolean onBlockPlace(final Block block, final User player, final String username, final IEssentials ess) throws SignException, ChargeException

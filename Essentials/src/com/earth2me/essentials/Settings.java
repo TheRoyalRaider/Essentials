@@ -463,7 +463,7 @@ public class Settings implements net.ess3.api.ISettings
 			mFormat = mFormat.replace("{TEAMPREFIX}", "{3}");
 			mFormat = mFormat.replace("{TEAMSUFFIX}", "{4}");
 			mFormat = mFormat.replace("{TEAMNAME}", "{5}");
-			mFormat = "Â§r".concat(mFormat);
+			mFormat = "§r".concat(mFormat);
 			chatFormats.put(group, mFormat);
 		}
 		return mFormat;

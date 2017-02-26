@@ -21,15 +21,15 @@ public class SignWeather extends EssentialsSign
 		final String timeString = sign.getLine(1);
 		if ("Sun".equalsIgnoreCase(timeString))
 		{
-			sign.setLine(1, "ยง2Sun");
+			sign.setLine(1, "ง2Sun");
 			return true;
 		}
 		if ("Storm".equalsIgnoreCase(timeString))
 		{
-			sign.setLine(1, "ยง2Storm");
+			sign.setLine(1, "ง2Storm");
 			return true;
 		}
-		sign.setLine(1, "ยงc<sun|storm>");
+		sign.setLine(1, "งc<sun|storm>");
 		throw new SignException(tl("onlySunStorm"));
 	}
 
@@ -39,14 +39,14 @@ public class SignWeather extends EssentialsSign
 		final Trade charge = getTrade(sign, 2, ess);
 		charge.isAffordableFor(player);
 		final String weatherString = sign.getLine(1);
-		if ("ยง2Sun".equalsIgnoreCase(weatherString))
+		if ("ง2Sun".equalsIgnoreCase(weatherString))
 		{
 			player.getWorld().setStorm(false);
 			charge.charge(player);
 			Trade.log("Sign", "WeatherSun", "Interact", username, null, username, charge, sign.getBlock().getLocation(), ess);
 			return true;
 		}
-		if ("ยง2Storm".equalsIgnoreCase(weatherString))
+		if ("ง2Storm".equalsIgnoreCase(weatherString))
 		{
 			player.getWorld().setStorm(true);
 			charge.charge(player);

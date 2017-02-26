@@ -32,14 +32,14 @@ public class SignProtection extends EssentialsSign
 	@Override
 	protected boolean onSignCreate(final ISign sign, final User player, final String username, final IEssentials ess) throws SignException, ChargeException
 	{
-		sign.setLine(3, "ยง4" + username);
+		sign.setLine(3, "ง4" + username);
 		if (hasAdjacentBlock(sign.getBlock()))
 		{
 			final SignProtectionState state = isBlockProtected(sign.getBlock(), player, username, true);
 			if (state == SignProtectionState.NOSIGN || state == SignProtectionState.OWNER
 				|| player.isAuthorized("essentials.signs.protection.override"))
 			{
-				sign.setLine(3, "ยง1" + username);
+				sign.setLine(3, "ง1" + username);
 				return true;
 			}
 		}
@@ -210,7 +210,7 @@ public class SignProtection extends EssentialsSign
 			if (b.getType() == Material.SIGN_POST || b.getType() == Material.WALL_SIGN)
 			{
 				final Sign sign = (Sign)b.getState();
-				if (sign.getLine(0).equalsIgnoreCase("ยง1[Protection]"))
+				if (sign.getLine(0).equalsIgnoreCase("ง1[Protection]"))
 				{
 					return true;
 				}
@@ -224,7 +224,7 @@ public class SignProtection extends EssentialsSign
 					if (a.getType() == Material.SIGN_POST || a.getType() == Material.WALL_SIGN)
 					{
 						final Sign sign = (Sign)a.getState();
-						if (sign.getLine(0).equalsIgnoreCase("ยง1[Protection]"))
+						if (sign.getLine(0).equalsIgnoreCase("ง1[Protection]"))
 						{
 							return true;
 						}

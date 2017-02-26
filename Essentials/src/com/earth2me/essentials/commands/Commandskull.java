@@ -55,7 +55,7 @@ public class Commandskull extends EssentialsCommand
 			throw new Exception(tl("noPermissionSkull"));
 		}
 
-		metaSkull.setDisplayName("Â§fSkull of " + owner);
+		metaSkull.setDisplayName("§fSkull of " + owner);
 		metaSkull.setOwner(owner);
 
 		itemSkull.setItemMeta(metaSkull);

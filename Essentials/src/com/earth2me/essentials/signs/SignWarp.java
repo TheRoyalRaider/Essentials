@@ -23,7 +23,7 @@ public class SignWarp extends EssentialsSign
 
 		if (warpName.isEmpty())
 		{
-			sign.setLine(1, "ยงc<Warp name>");
+			sign.setLine(1, "งc<Warp name>");
 			throw new SignException(tl("invalidSignLine", 1));
 		}
 		else
@@ -39,7 +39,7 @@ public class SignWarp extends EssentialsSign
 			final String group = sign.getLine(2);
 			if ("Everyone".equalsIgnoreCase(group) || "Everybody".equalsIgnoreCase(group))
 			{
-				sign.setLine(2, "ยง2Everyone");
+				sign.setLine(2, "ง2Everyone");
 			}
 			return true;
 		}
@@ -51,7 +51,7 @@ public class SignWarp extends EssentialsSign
 		final String warpName = sign.getLine(1);
 		final String group = sign.getLine(2);
 		if ((!group.isEmpty()
-			 && ("ยง2Everyone".equals(group)
+			 && ("ง2Everyone".equals(group)
 				 || player.inGroup(group)))
 			|| (group.isEmpty() && (!ess.getSettings().getPerWarpPermission() || player.isAuthorized("essentials.warps." + warpName))))
 		{
